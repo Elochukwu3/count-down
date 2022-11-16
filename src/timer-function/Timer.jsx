@@ -23,6 +23,26 @@ return() => clearInterval(interval)
   )
 }
 
-function updateTimer(counDown) {
+function updateTimer(countDown) {
+  return{
+    seconds: convertSecond(countDown),
+    minutes: '00',
+    hours: '00',
+    days: '00'
+  }
+}
+
+function convertSecond(countDown) {
+  const days = Math.floor(countDown / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
   
+  const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
+}
+function convertMin(countDown) {
+  const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
+}
+function convertHr(countDown) {
+  const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
 }
