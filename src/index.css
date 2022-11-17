@@ -20,3 +20,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+.timer{
+  color: #fff;
+  font-size: 2em;
+  padding: .9rem .3rem;
+  text-align: center;
+}

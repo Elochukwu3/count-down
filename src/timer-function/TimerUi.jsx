@@ -1,27 +1,28 @@
 import React from 'react'
 import './Style.css';
 
-export default function TimerUi({showInput, dateInput}) {
+export default function TimerUi({dateVal, dateChange, hour, min, sec, day}) {
+
   return (
     <div className='page-container'>
         <div className='page-wrapper'>
-          {/* <img src="./img/countd.jpg" alt="" /> */}
-        <input type={"date"} onChange={showInput} value={dateInput} />
+         
+        <input type={"date"} onChange={dateChange} value={dateVal} />
         <ul>
             <li>
-              <p>00</p>
+              <p>{day}</p>
               <p>days</p>
             </li>
             <li>
-              <p>00</p>
+              <p>{hour}</p>
               <p>Hrs</p>
             </li>
             <li>
-            <p>00</p>
+            <p>{min}</p>
               <p>Mins</p>
             </li>
             <li>
-               <p>00</p>
+               <p>{sec}</p>
               <p>Secs</p>
             </li>
         </ul>

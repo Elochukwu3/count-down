@@ -17,6 +17,7 @@ export default function Timer() {
 
   const showInput = (e) => {
     setDateInput(e.target.value);
+    console.log(dateInterval);
   };
 
   useEffect(() => {
@@ -26,12 +27,13 @@ export default function Timer() {
     return () => clearInterval(interval);
   }, [dateInterval]);
 
+  const {seconds, minutes, hours, days} = time
   return (
     <div>
       {dateInterval < 0 ? (
-        <Timer/>
+        <TimerUi sec={"00"} min={"0"} hour={"0"} day={"00"} dateVal={"00"} dateChange={showInput}/>
       ) : (
-        <TimerUi/>
+        <TimerUi sec={seconds} min={minutes} hour={hours} day={days} dateVal={dateInput} dateChange={showInput}/>
       )}
     </div>
   );
