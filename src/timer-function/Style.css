@@ -4,3 +4,35 @@
     list-style: none;
     box-sizing: border-box;
 }
+.page-container{
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.page-wrapper{
+    background-color: aqua;
+    width: 100%;
+    max-width: 50vw;
+    display: flex;
+    align-items: center;
+    height: auto;
+    background-image: url('../img/countd.jpg');
+}
+.page-wrapper input{
+    padding: 1rem;
+    border: unset;
+    border-radius: 8px;
+}
+.page-wrapper ul{
+    display: flex;
+}
+.page-wrapper ul li{
+    border-radius: 50%;
+    background-color: black;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
