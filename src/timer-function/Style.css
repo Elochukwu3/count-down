@@ -9,15 +9,15 @@
     display: grid;
     place-items: center;
     align-items: center;
-    min-height: 100vh;
+   
 }
 .page-wrapper{
-    
     width: 100%;
     max-width: 90vw;
     display: flex;
     align-items: center;
-    height: 500px;
+    height: 100%;
+     min-height: 70vh;
     background: rgba(0, 0, 0, 0.1) url('./img/countd.jpg');
     background-size: cover;
     justify-content: space-around;
@@ -30,7 +30,7 @@
     padding: 1rem;
     border: unset;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: rgb(116, 111, 111);
     color: black;
     font-size: 1rem;
     width: 30%;
@@ -51,13 +51,27 @@
     place-items: center;
     border: 3px solid rgb(1, 1, 25);
     box-shadow: inset 1px 1px 10px rgb(1, 1, 36);
+    padding: .5rem;
+}
+.instruction{
+    text-transform: capitalize;
+}
+.instruction span{
+    font-size: .8rem;
+    text-shadow: 1px 1px 1.3px #fff;
+    font-style: italic;
+}.sub{
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #000025;
+    font-weight: 500;
 }
 @media screen and (max-width: 840px) {
 
     .page-wrapper{
         flex-direction: column;
         justify-content: center;
-        gap: 1.7rem;
+        gap: 2.1rem;
     }
     .page-wrapper input{
         width: 80%;
@@ -66,12 +80,25 @@
         width: 100%;
         justify-content: center;
     }
+    .num{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
 }
 @media screen and (max-width: 390px) {
     .page-wrapper ul li{
         width: 3.5rem;
         height: 3.5rem; 
-        font-size: .9em;
         overflow: hidden;
+      padding: 0;
+        
+    }
+    .sub{
+        font-size: .7rem;color: rgb(3, 1, 31);
+        font-weight: 700;
+    }
+    .num{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-bottom: -10px;
+        font-size: 18px;
     }
 }
