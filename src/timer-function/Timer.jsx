@@ -17,7 +17,6 @@ export default function Timer() {
 
   const showInput = (e) => {
     setDateInput(e.target.value);
-    console.log(dateInterval);
   };
 
   useEffect(() => {
