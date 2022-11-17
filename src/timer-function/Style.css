@@ -4,6 +4,10 @@
     list-style: none;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: "digital-clock-font";
+    src: url("../font/digital-clock-font");
+}
 .page-container{
     display: grid;
     place-items: center;
@@ -11,13 +15,19 @@
     min-height: 100vh;
 }
 .page-wrapper{
-    background-color: aqua;
+    background-color: rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 50vw;
+    max-width: 90vw;
     display: flex;
     align-items: center;
-    height: auto;
-    background-image: url('../img/countd.jpg');
+    height: 500px;
+    background: rgba(0, 0, 0, 0.1) url('./img/countd.jpg');
+    background-size: cover;
+    justify-content: space-around;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    /* object-fit: cover; */
 }
 .page-wrapper input{
     padding: 1rem;
@@ -29,10 +39,14 @@
 }
 .page-wrapper ul li{
     border-radius: 50%;
-    background-color: black;
-    width: 3.5rem;
-    height: 3.5rem;
+    background-color: rgba(0, 0, 0, .4);
+    width: 4.5rem;
+    height: 4.5rem;
     display: grid;
     justify-content: center;
     align-items: center;
+    margin: 0 .5rem;
+    position: relative;
+    place-items: center;
+    border: 3px solid #fff;
 }
